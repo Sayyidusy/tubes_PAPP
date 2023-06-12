@@ -7,8 +7,8 @@ public class PlayerControllerX : MonoBehaviour
     public float rotationSpeed = 100f;
 
     private Rigidbody rb;
-    private float rightControllerVerticalInput;  // Input vertikal dari controller kanan
-    private float leftControllerHorizontalInput;  // Input horizontal dari controller kiri
+    private float movementInput;
+    private float rotationInput;
 
     private void Start()
     {
@@ -18,8 +18,8 @@ public class PlayerControllerX : MonoBehaviour
     private void Update()
     {
         // Dapatkan input dari Oculus Quest 2
-        rightControllerVerticalInput = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).y;
-        leftControllerHorizontalInput = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x;
+        movementInput = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).y;
+        rotationInput = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x;
     }
 
     private void FixedUpdate()
@@ -30,13 +30,13 @@ public class PlayerControllerX : MonoBehaviour
 
     private void MoveCar()
     {
-        Vector3 movement = transform.forward * rightControllerVerticalInput * speed * Time.deltaTime;
+        Vector3 movement = transform.forward * movementInput * speed * Time.deltaTime;
         rb.MovePosition(rb.position + movement);
     }
 
     private void RotateCar()
     {
-        Quaternion rotation = Quaternion.Euler(0f, leftControllerHorizontalInput * rotationSpeed * Time.deltaTime, 0f);
+        Quaternion rotation = Quaternion.Euler(0f, rotationInput * rotationSpeed * Time.deltaTime, 0f);
         rb.MoveRotation(rb.rotation * rotation);
     }
 }
