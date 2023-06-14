@@ -18,7 +18,7 @@ public class StirController : MonoBehaviour
 
         // Rotasi stir
         transform.localRotation = Quaternion.Euler(0f, 0f, -wheelRotation);
-
+//
         // Rotasi bodi mobil berdasarkan input rotasi mobil
         Quaternion carRotation = Quaternion.Euler(0f, rotationInput * rotationSpeed * Time.deltaTime, 0f);
     }
