@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StirController : MonoBehaviour
-{
-   public Transform carBody; // Transform dari bodi mobil
+{// Transform dari bodi mobil
     public float rotationSpeed = 100f; // Kecepatan rotasi stir
 
     private float maxWheelRotation = 180f; // Maksimum rotasi stir dalam derajat
@@ -22,6 +21,5 @@ public class StirController : MonoBehaviour
 
         // Rotasi bodi mobil berdasarkan input rotasi mobil
         Quaternion carRotation = Quaternion.Euler(0f, rotationInput * rotationSpeed * Time.deltaTime, 0f);
-        carBody.rotation *= carRotation;
     }
 }
