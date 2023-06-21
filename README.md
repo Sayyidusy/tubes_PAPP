@@ -3,7 +3,8 @@ VRDRIVESIM Adalah sebuah Game Edukasi bagi anak-anak yang berisikan tentang peng
 Saat ini Tim Vixens hanya menyediakan mobil untuk kendaraan yang tersedia, selain itu VRDRIVESIM menggunakan teknologi VR (OCCULUS QUEST 2) untuk menjalankan Game VRDRIVESIM.<br>
 Link Itch.io VRDRIVESIM:<br>
 Link Youtube Game Trailer: https://youtu.be/8JuGlWjgD9w<br>
-Link Full Project One Drive: <br>
+Link Full Project One Drive: 
+<br><br>
 
 ##KELOMPOK VIXENS :
 - Wulan Maulidya
